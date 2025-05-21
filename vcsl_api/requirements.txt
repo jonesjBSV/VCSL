@@ -2,10 +2,14 @@ apscheduler==3.10.4
 cryptography==41.0.7
 fastapi==0.109.0
 kink==0.7.0
-psycopg2==2.9.6
-pydantic==2.5.3
+# Use Psycopg 3 for better compatibility with newer Python versions
+psycopg[binary]>=3.1
+psycopg_pool>=3.1
+pydantic>=2.7.0,<3.0.0
 pytest==7.4.4
 redis==5.0.1
 Requests==2.31.0
-web3==6.5.0
+# Correct package name
+# bsvlib>=0.1.12 - Replaced with bsv-sdk
+bsv-sdk>=0.2.0
 uvicorn==0.25.0
